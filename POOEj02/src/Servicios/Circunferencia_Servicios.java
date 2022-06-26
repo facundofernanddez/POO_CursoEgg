@@ -23,8 +23,14 @@ public class Circunferencia_Servicios {
         return new Circunferencia(radio);
     }
     
-    public void area(Circunferencia circ1) {
-       double area = (Math.PI) * (circ1.getRadio() * circ1.getRadio());
+    public double area(Circunferencia circ) {
+       double area = (Math.PI) * (circ.getRadio() * circ.getRadio());
+       return area;
+    }
+    
+    public double perimetro(Circunferencia circ) {
+        double perimetro = 2 * (Math.PI) * circ.getRadio();
+        return perimetro;
     }
     
 }
