@@ -10,6 +10,9 @@ e) Método perimetro(): para calcular el perímetro (Perimetro = 2 ∗ pi ∗ ra
  */
 package pooej02;
 
+import Entidades.Circunferencia;
+import Servicios.Circunferencia_Servicios;
+
 /**
  *
  * @author Facundo
@@ -20,7 +23,14 @@ public class POOEj02 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Circunferencia_Servicios serv = new Circunferencia_Servicios();
+        Circunferencia newCirc = serv.crearCircunferencia();
+        
+        double area_newCirc = serv.area(newCirc);
+        double peri_newCirc = serv.perimetro(newCirc);
+        
+        System.out.println("El área de la circunferencia es " + area_newCirc + " y el perimetro es " + peri_newCirc);
     }
     
 }
